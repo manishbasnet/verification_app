@@ -1,0 +1,3 @@
+export const VERIFY_CODE = 'VERIFY_CODE';
+export const RESPONSE_ERROR = 'RESPONSE_ERROR';
+

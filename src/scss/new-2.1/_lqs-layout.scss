@@ -1,0 +1,49 @@
+.lqsBoard-new {
+    background-color: #f5f6fa;
+    overflow-x: hidden;
+}
+
+.lqs-new-table,
+.lqs-table-footer,
+.lqs_navigation {
+    .container {
+        width: 1820px;
+        @include breakpoint(larger) {
+            width: 1400px;
+        }
+        @include breakpoint(large) {
+            width: 1250px;
+        }
+    }
+}
+.display-row {
+    margin-bottom: 20px;
+}
+
+.lqsBoard-new {
+    header {
+        .container {
+            .header-menu {
+                li {
+                    .menu-item {
+                        &.active {
+                            border: 0;
+                            padding: 0;
+                            position: relative;
+                            color: $color__hle-blue;
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                bottom: -32px;
+                                left: 0;
+                                height: 4px;
+                                width: 100%;
+                                background-color: $color__hle-blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

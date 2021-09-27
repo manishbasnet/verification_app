@@ -1,0 +1,176 @@
+.table-section {
+    &.lqs-new-table {
+        padding: 0;
+        .table-wrap {
+            border-radius: 0;
+            padding-top: 0;
+            overflow: visible;
+            table {
+                .cell {
+                    padding: 7px 14px;
+                    height: inherit !important;
+                }
+                td.cell:nth-child(3) {
+                    text-align: left;
+                }
+                .cell-leadMainDashboard-0 .filter-icon,
+                .cell-leadMainDashboard-9 .filter-icon {
+                    display: none;
+                }
+
+                .cell-leadMainDashboard-1,
+                .cell-leadMainDashboard-2 {
+                    text-align: left;
+                }
+                .cell-leadMainDashboard-2 .thead,
+                .cell-leadMainDashboard-6 .thead {
+                    @include breakpoint(larger) {
+                        position: relative;
+                        top: 10px;
+                    }
+                }
+                .cell-leadMainDashboard-1 .filter-dropdown,
+                .cell-leadMainDashboard-2 .filter-dropdown,
+                .cell-leadMainDashboard-8 .filter-dropdown {
+                    width: 220px;
+                    @include breakpoint(larger) {
+                        width: 240px !important;
+                    }
+                }
+                .cell-leadMainDashboard-8 .filter-dropdown {
+                    left: -40px;
+                }
+                .star-ratings {
+                    display: inline-flex;
+                    position: relative;
+                    top: -2px;
+                }
+            }
+            thead {
+                tr {
+                    background-color: $color__hle-blue;
+                    color: $color__hle-white;
+                    th {
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                        position: relative;
+                        &.left-text {
+                            text-align: left;
+                        }
+                        &.right-text {
+                            text-align: right;
+                        }
+                        .thead {
+                            display: flex;
+                            align-items: center;
+
+                            a {
+                                span {
+                                    color: $color__hle-white;
+                                    vertical-align: middle;
+                                    padding-left: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    background-color: $color__hle-white;
+                    border-bottom: 1px solid #e8e8e8;
+                    &:nth-child(even) {
+                        background-color: #f2f3f4;
+                    }
+                    td {
+                        font-size: 13px;
+                        a {
+                            span {
+                                color: $color__hle-grey;
+                                vertical-align: middle;
+                                display: inline-block;
+                                font-size: 20px;
+                                @include transition(0.3s);
+                            }
+                            &:hover {
+                                span {
+                                    color: $color__hle-blue;
+                                }
+                            }
+                            &.lqs-tooltip {
+                                display: inline;
+                                position: relative;
+                                &:hover {
+                                    &:after {
+                                        display: inline-block;
+                                        background: $color__hle-dark-grey01;
+                                        color: #fff;
+                                        content: attr(title);
+                                        font-size: 12px;
+                                        padding: 5px;
+                                        width: 100px;
+                                        position: absolute;
+                                        top: -5px;
+                                        left: 30px;
+                                    }
+                                    &:before {
+                                        border: solid;
+                                        border-color: transparent $color__hle-dark-grey01 transparent transparent;
+                                        border-width: 7px;
+                                        content: '';
+                                        left: 17px;
+                                        bottom: 2px;
+                                        position: absolute;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    &.lqs-table-footer {
+        font-size: 14px;
+        color: #515151;
+        margin-bottom: 0;
+        form {
+            select {
+                width: auto;
+            }
+            label {
+                font-weight: normal;
+            }
+        }
+        .lqs-pagination {
+            display: flex;
+            align-items: flex-end;
+            .page-list {
+                margin: 0 10px;
+
+                input {
+                    width: 30px;
+                    background: $color__hle-white;
+                    border-radius: 0;
+                    height: auto;
+                    padding: 5px 10px;
+                    border: 1px solid #d7d7d7;
+                    margin: 0 5px;
+                }
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            /* Firefox */
+            input[type='number'] {
+                -moz-appearance: textfield;
+            }
+        }
+    }
+}

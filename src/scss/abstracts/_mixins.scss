@@ -1,0 +1,137 @@
+/*********************
+Center Block
+*********************/
+
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*********************
+Clearfix
+*********************/
+@mixin clearfix() {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*********************
+Centering Items
+*********************/
+
+@mixin center($horizontal: true, $vertical: true) {
+    position: absolute;
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0%);
+    } @else if ($vertical) {
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+}
+@mixin disable-absolute() {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+}
+
+/*********************
+Transition
+*********************/
+
+@mixin transition($value) {
+    transition: all $value ease-in-out;
+}
+/*********************
+Flex order
+*********************/
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex-space-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin flex-space-evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+    /* Large Devices, Wide Screens */
+    @if $point == larger {
+        @media (max-width: 1700px) {
+            @content;
+        }
+    }
+    /* Large Devices, Wide Screens */
+    @if $point == large {
+        @media (max-width: 1400px) {
+            @content;
+        }
+    }
+    /* Large Devices, Wide Screens */
+    @if $point == wider {
+        @media (max-width: 1280px) {
+            @content;
+        }
+    }
+    /* Medium Devices, Desktops */
+    @else if $point == wide {
+        @media (max-width: 1199px) {
+            @content;
+        }
+    }
+    /* Medium Devices, Desktops */
+    @else if $point == medium {
+        @media (max-width: 991px) {
+            @content;
+        }
+    }
+    /* Small Devices, Tablets */
+    @else if $point == small {
+        //@media (max-width : 768px) { @content ; }
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    /* Extra Small Devices, Phones */
+    @else if $point == smaller {
+        @media (max-width: 567px) {
+            @content;
+        }
+    }
+    /* Extra Small Devices, Phones */
+    @else if $point == extrasmall {
+        @media (max-width: 479px) {
+            @content;
+        }
+    }
+    /* Custom, iPhone Retina */
+    @else if $point == iPhone5 {
+        @media (max-width: 374px) {
+            @content;
+        }
+    }
+}

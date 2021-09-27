@@ -1,0 +1,58 @@
+body,
+button,
+input,
+select,
+textarea,
+p {
+  color: $color__text-main;
+  font-family: $font_main;
+  font-size: $content_size;
+}
+body{
+  background-color: $color__hle-blue-light;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  clear: both;
+  font-family: $font_main;
+  color: $color__text-main;
+  margin: 0;;
+}
+
+h1 {
+  color: $color__hle-blue;
+  text-transform: capitalize;
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h5,
+h6 {
+  font-size: $content_size;
+  font-family: $font_main;
+  margin-top: 0;
+}
+ul,
+ol {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-position: inside;
+  list-style: none;
+}
+a,
+a:focus,
+a:hover {
+  color: $color__hle-dark-grey ;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600 ;
+}

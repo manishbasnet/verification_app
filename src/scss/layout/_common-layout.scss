@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 1738px;
+    max-width: 100%;
+    padding: 0 15px;
+    position: relative;
+    @include breakpoint(larger) {
+        width: 1400px;
+    }
+    @include breakpoint(large) {
+        width: 1250px;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+input[type='search'],
+input,
+.btn,
+.button-blue,
+.button-orange {
+    color: $color__hle-grey;
+    font-size: 14px;
+    padding: 11px 35px;
+    text-transform: capitalize;
+    background-color: transparent;
+    line-height: 1;
+    margin-top: 30px;
+    border-radius: 100px;
+    height: 50px;
+    border: 2px solid $color__hle-grey;
+    padding: 0 20px;
+    outline: none;
+}
+
+.btn.focus,
+.btn:active,
+.btn:hover {
+    color: #fff;
+    outline-color: transparent;
+}
+
+.input-date {
+    text-transform: capitalize !important;
+}
+/* ------------------------- Custom Placeholder Text ------------------------ */
+
+input[type='date']::before {
+    content: attr(data-placeholder);
+    width: 75%;
+    @include breakpoint(larger) {
+        width: 65%;
+    }
+}
+input[type='date']:focus::before,
+input[type='date']:valid::before {
+    display: none;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+    background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png)
+        center/70% no-repeat;
+    color: rgba(0, 0, 0, 0);
+    opacity: 0.5;
+    outline: none;
+}
+
+// table css
+table {
+    width: 100%;
+    .cell {
+        padding: 10px 15px;
+        &.column1 {
+            width: 4%;
+            text-align: center !important;
+        }
+        &.column2 {
+            width: 23%;
+            display: flex;
+            align-items: center;
+        }
+        &.column3 {
+            width: 12%;
+        }
+        &.column4 {
+            width: 12%;
+        }
+        &.column5 {
+            width: 12%;
+        }
+        &.column6 {
+            width: 9.5%;
+            .page-name {
+                margin-left: -10px;
+            }
+        }
+        &.column7 {
+            width: 10.5%;
+        }
+        &.column8 {
+            width: 9%;
+            @include breakpoint(larger) {
+                width: 8%;
+            }
+        }
+        &.column9 {
+            width: 8%;
+
+            @include breakpoint(large) {
+                width: 9%;
+                .cell-icon {
+                    right: 2px !important;
+                }
+            }
+            @include breakpoint(larger) {
+                width: 9%;
+                .cell-icon {
+                    right: 18px !important;
+                }
+            }
+        }
+    }
+}
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+//added by priya
+.btn-default {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 11px 35px;
+    text-transform: capitalize;
+    background-color: $color__hle-grey;
+    line-height: 1;
+    margin-top: 30px;
+    width: 150px;
+    border-radius: 100px;
+    height: 45px;
+    border: 2px solid $color__hle-grey;
+    padding: 0 20px;
+    outline: none;
+}
+.alert-blue {
+    color: #2a80af;
+    background-color: #c2e1ed;
+    border-color: #3f88c657;
+}
+.alert-yellow {
+    color: #e29702;
+    background-color: #f9eacc;
+    border-color: #e2970226;
+}
+.alert-success {
+    color: #6dca79;
+    background-color: #d4efd5;
+    border-color: #a3ddb7;
+}
+.mail-alert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    span {
+        line-height: 0.7;
+        float: left;
+    }
+    a {
+        color: #721c24 !important;
+    }
+}
+
+// ALert Component
+.alert {
+    background-color: $color__alert-red;
+    border-color: $color__alert-red;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    line-height: 1.5;
+    p {
+        color: $color__hle-red !important;
+    }
+    i {
+        color: $color__hle-red !important;
+    }
+    a {
+        color: $color__hle-red !important;
+    }
+}
+.primary-alert {
+    background-color: $color__alert-primary;
+    border-color: $color__alert-primary;
+    p {
+        color: $color__hle-blue !important;
+    }
+    i {
+        color: $color__hle-blue !important;
+    }
+}
+.success-alert {
+    background-color: $color__alert-success;
+    border-color: $color__alert-success;
+    p {
+        color: $color__hle-green !important;
+    }
+    i {
+        color: $color__hle-green !important;
+    }
+}
+.warning-alert {
+    background-color: $color__alert-warn;
+    border-color: $color__alert-warn;
+    p {
+        color: $color__hle-yellow !important;
+    }
+    i {
+        color: $color__hle-yellow !important;
+    }
+}
+.info-alert {
+    background-color: $color__alert-info;
+    border-color: $color__alert-info;
+    p {
+        color: $color__hle-blue !important;
+    }
+    i {
+        color: $color__hle-blue !important;
+    }
+}
+#warnNotice {
+    &.alert {
+        margin-top: 1rem;
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v70/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+        format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* For Unauthorized access */
+.error-section {
+    margin: 10.5% auto;
+    .error_content {
+        width: 600px;
+        margin: 0 auto;
+
+        h3 {
+            font-size: 40px;
+            color: $color__hle-blue;
+            margin: 30px 0 20px;
+            font-weight: bold !important;
+        }
+        p {
+            line-height: 32px;
+            color: $color__hle-dark-grey;
+            a {
+                text-decoration: underline;
+                font-weight: bold !important;
+                text-underline-position: from-font;
+            }
+        }
+    }
+}

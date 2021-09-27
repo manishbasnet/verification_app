@@ -1,0 +1,136 @@
+.table-section {
+    .table-wrap.table_inside_block {
+        padding-top: 42px;
+        .table-head {
+            tr {
+                th {
+                    padding: 15px;
+                    height: 64px;
+                    text-align: left;
+                    font-weight: 600;
+                    justify-content: end !important;
+                    &:nth-child(4) {
+                        justify-content: center !important;
+                    }
+                    @include breakpoint(larger) {
+                        font-size: 16px;
+                    }
+                    i {
+                        cursor: pointer;
+                    }
+                    i.active {
+                        opacity: 0.5;
+                    }
+                }
+                th.column1 {
+                    justify-content: center !important;
+                }
+            }
+        }
+        .table_body_wrap {
+            tr {
+                td {
+                    overflow: hidden;
+                    height: 60px;
+                    align-items: center;
+                    text-align: left;
+                    margin-bottom: 5px;
+                    line-height: 3;
+                    &:nth-child(4),
+                    &:last-child {
+                        justify-content: center;
+                    }
+                    img {
+                        width: 20px;
+                        margin-left: 10px;
+                    }
+                }
+                td.column2 {
+                    display: flex;
+                    align-items: center;
+                }
+                .comment-section {
+                    height: 50px;
+                    overflow: hidden;
+                    line-height: 3;
+                }
+            }
+        }
+        .table_footer {
+            .tr-footer {
+                background-color: $color__hle-blue;
+                color: $color__hle-white;
+                font-weight: bold;
+                td {
+                    line-height: 2.5;
+                    height: 64px;
+                    padding: 15px;
+                }
+            }
+        }
+        .cell {
+            &.column1 {
+                text-align: center;
+            }
+            &.column2 {
+                width: 12%;
+            }
+            &.column3 {
+                width: 14%;
+                text-align: left;
+                @include breakpoint(larger) {
+                    width: 15.5%;
+                }
+                @include breakpoint(large) {
+                    width: 20%;
+                }
+            }
+            &.column4 {
+                text-align: center;
+                width: 14%;
+                @include breakpoint(larger) {
+                    width: 15%;
+                }
+                @include breakpoint(large) {
+                    width: 17%;
+                }
+            }
+            &.column5 {
+                width: 41%;
+                text-align: left;
+                @include breakpoint(larger) {
+                    width: 37%;
+                }
+                @include breakpoint(large) {
+                    width: 35%;
+                }
+            }
+            &.column6 {
+                width: 15%;
+                @include breakpoint(larger) {
+                    width: 16%;
+                }
+                @include breakpoint(large) {
+                    width: 12%;
+                }
+            }
+        }
+    }
+}
+
+.table-view-more {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    i {
+        background-color: black;
+        color: #fff;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+}

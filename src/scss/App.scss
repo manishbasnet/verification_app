@@ -1,0 +1,233 @@
+@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+$primary: #27ade7;
+$support: #9d9b9b;
+$accent: #fb7925;
+$alert: #9d2a2a;
+$warning: #e29700;
+$success: #29ad2c;
+
+// utility class can be replaced by custom variables if we use bootstrap later
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-10 {
+    margin-bottom: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.btn-primary {
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    background: $primary;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: darken($primary, 5%);
+        cursor: pointer;
+    }
+}
+.btn-primary:disabled {
+    &:hover {
+        background: darken($primary, 5%);
+        cursor: not-allowed;
+    }
+}
+
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    color: $primary;
+    margin-bottom: 20px;
+}
+
+.title3 {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    .support {
+        color: $support;
+        font-size: 14px;
+        padding-left: 5px;
+        font-weight: normal;
+    }
+}
+
+.supportText {
+    font-size: 14px;
+    color: $support;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fixedWidth {
+    max-width: 800px;
+    width: 100%;
+    background: #eff8fc;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.centeredX {
+    margin-top: 30px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 0;
+    }
+}
+
+.centeredY {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customRadioButtonHolder {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    input[type='radio'] {
+        display: none;
+    }
+    .customRadioButton.checked {
+        background-color: $primary;
+
+        span {
+            color: white;
+
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.text-area {
+    height: 80px;
+    border: 1px solid $primary;
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    line-height: 2;
+    padding-left: 19px;
+
+    &:active,
+    &:focus {
+        outline-color: $primary;
+    }
+}
+
+.customRadioButton {
+    min-height: 45px;
+    background-color: #f4f4f4;
+    transition: all 250ms ease;
+    will-change: transition;
+    display: inline-flex;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding: 0 45px 0 15px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid $primary;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    span {
+        position: relative;
+        left: 0;
+        right: 0;
+        padding-left: 30px;
+        transition: all 300ms ease;
+        font-size: 16px;
+        user-select: none;
+        color: $black;
+        text-align-last: left;
+        font-weight: normal;
+
+        &:before {
+            position: absolute;
+            top: -4px;
+            opacity: 0;
+            left: 0;
+            transition: all 600ms ease-in-out;
+        }
+    }
+}
+
+.checkedDiv {
+    span {
+        &:before {
+            content: url('/img/check.png');
+        }
+    }
+}
+
+.logo {
+    width: 150px;
+}
+
+.note {
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+
+// change the class to show different color to the section above submit button
+.warningMessage {
+    color: $warning;
+    background: lighten($warning, 50%);
+}
+
+.successMessage {
+    color: $success;
+    background: lighten($success, 50%);
+}
+
+.alertMessage {
+    color: $alert;
+    background: lighten($alert, 50%);
+}
+
+.warningIcon {
+    font-size: 18px;
+}

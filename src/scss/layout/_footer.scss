@@ -1,0 +1,116 @@
+/**
+ * /* --------------------------- PAGINATION SECTION ---------------------------
+ *
+ * @format
+ */
+
+.table-footer {
+    margin: 30px 0;
+
+    form {
+        label {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        select {
+            width: 100px;
+            border: transparent;
+            padding: 5px;
+            outline: none;
+        }
+    }
+    .pagination-section {
+        margin-bottom: 20px;
+        display: inline-flex;
+        .btn {
+            margin-top: 0px;
+        }
+        .btn:disabled {
+            cursor: not-allowed;
+        }
+        .prev-arrow,
+        .next-arrow {
+            cursor: pointer !important;
+            line-height: 1.2;
+            font-size: 35px;
+        }
+        .prev-arrow[disabled],
+        .next-arrow[disabled] {
+            cursor: not-allowed !important;
+            pointer-events: none;
+        }
+        .arrow,
+        .pagination-list {
+            width: 50px;
+            color: $color__hle-light-grey;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $color__hle-white;
+            border: 1px solid $color__hle-light-grey;
+            position: relative;
+            box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+            transition: 0.3s all ease-in-out;
+            &:hover {
+                span {
+                    color: $color__hle-black;
+                }
+            }
+            span {
+                @include center(true, true);
+                color: $color__hle-light-grey;
+                font-size: 40px;
+                -webkit-text-stroke: 0.5px #fff;
+                transition: 0.2s all ease-in-out;
+            }
+        }
+        .pagination-list {
+            .pagination-number {
+                color: #9d9b9b;
+                -webkit-transition: 0.2s all ease-in-out;
+                transition: 0.2s all ease-in-out;
+                &:hover {
+                    color: black;
+                    -webkit-transition: 0.2s all ease-in-out;
+                    transition: 0.2s all ease-in-out;
+                }
+            }
+            .active,
+            .activeIndex1 {
+                color: black;
+                font-weight: 600;
+                cursor: not-allowed !important;
+                pointer-events: none;
+            }
+            cursor: pointer;
+            width: 260px;
+            border-radius: 100px;
+            @include flex-space-around();
+            padding: 0 10px;
+            margin: 0 15px;
+            a {
+                color: $color__hle-grey !important;
+                font-weight: 600;
+            }
+            a.active {
+                color: black !important;
+            }
+            a.activeIndex1 {
+                color: black !important;
+            }
+            .page-number {
+                color: $color__hle-grey !important;
+                font-size: 20px;
+                transition: 0.2s all ease-in-out;
+                &.active,
+                &:hover {
+                    color: $color__hle-black;
+                }
+            }
+        }
+        .pagination-list.disable-number {
+            cursor: not-allowed !important;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+    }
+}

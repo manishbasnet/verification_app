@@ -1,0 +1,117 @@
+.search_filter_wrap {
+    input {
+        background-color: $color__hle-white;
+    }
+    .search-section {
+        // margin-left: 40px;
+        @include breakpoint(large) {
+            margin-left: 0px !important;
+        }
+    }
+    .search-wrap {
+        input {
+            width: 350px !important;
+        }
+        .search-icon {
+            top: 72% !important;
+        }
+        @include breakpoint(large) {
+            input {
+                width: 265px !important;
+            }
+        }
+        @include breakpoint(larger) {
+            input {
+                width: 265px !important;
+            }
+        }
+    }
+
+    #select_wrap {
+        margin-left: 0;
+        width: 270px;
+        margin-top: 30px;
+        margin-right: 30px;
+        vertical-align: middle;
+        background-color: $color__hle-white;
+        @include breakpoint(large) {
+            width: 260px;
+            margin-right: 6px !important;
+        }
+    }
+    .filter-section {
+        .select {
+            @include breakpoint(larger) {
+                width: 240px !important;
+            }
+        }
+        .input-date {
+            width: 223px !important;
+            @include breakpoint(larger) {
+                width: 160px !important;
+            }
+            @include breakpoint(wide) {
+                width: 150px !important;
+            }
+        }
+        .date-to {
+            @include breakpoint(large) {
+                margin: 0 5px 0 10px !important;
+            }
+        }
+    }
+}
+
+.btn-section {
+    @include breakpoint(large) {
+        margin-left: 0px !important;
+    }
+    @include breakpoint(larger) {
+        margin-left: 20px;
+    }
+    input {
+        margin-left: 30px;
+        outline: none !important;
+        @include breakpoint(large) {
+            margin-left: 8px !important;
+        }
+        @include breakpoint(larger) {
+            margin-left: 5px;
+        }
+        &:first-child {
+            margin-right: 0 !important;
+            &:hover {
+                color: $color__hle-blue !important;
+                background-color: $color__hle-dark-grey !important;
+            }
+        }
+        &:last-child {
+            &:hover {
+                border-color: $color__hle-blue !important;
+                background-color: $color__hle-white !important;
+                color: $color__hle-dark-grey !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-device-width: 1405px) and (max-device-width: 1700px) {
+    .input-date {
+        width: 230px !important;
+    }
+    /* STYLES HERE */
+    #search-form button.search-icon {
+        right: 48px !important;
+    }
+}
+
+span.css-1okebmr-indicatorSeparator {
+    margin: 0px !important;
+    display: none;
+}
+.css-1bxymgg-SingleValue {
+    margin-top: 25px !important;
+}
+.css-o8tlc8 {
+    margin-top: 25px !important;
+}

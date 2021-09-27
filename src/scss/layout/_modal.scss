@@ -1,0 +1,56 @@
+/* ------------------------------- POPUP MODEL ------------------------------ */
+
+.modal {
+    &.fade {
+        .modal-dialog {
+            @include center(true, true);
+        }
+    }
+    &.in {
+        .modal-dialog {
+            @include center(true, true);
+        }
+    }
+}
+.modal-header {
+    border: 0;
+    padding: 0;
+    .close {
+        color: $color__hle-dark-grey;
+        opacity: 1;
+        outline: none;
+    }
+}
+.modal-content {
+    background: $color__hle-blue-light;
+    border-radius: 10px;
+    padding: 30px 20px;
+    p {
+        color: $color__hle-dark-grey;
+        margin-bottom: 18px;
+        font-size: 18px;
+        &:last-child {
+            font-size: 16px;
+        }
+        strong {
+            font-weight: bold !important;
+        }
+    }
+}
+.modal-footer {
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    border: 0;
+    .btn {
+        margin: 0;
+        outline: none;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
